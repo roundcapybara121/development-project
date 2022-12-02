@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Monstera",
+        "sunlight": 2,
+        "price": 7,
+        "image": "images/monstera.webp",
+        "id":1
+    },
+    {
+        "name": "Peace Lily",
+        "sunlight": 1,
+        "price": 11,
+        "image": "images/peace-lily.jpeg",
+        "id":2
+    },
+    {
+        "name": "Peperomia",
+        "sunlight": 3,
+        "price": 8,
+        "image": "images/peperomia.webp",
+        "id":3
+    },
+    {
+        "name": "Pothos",
+        "sunlight": 1,
+        "price": 5,
+        "image": "images/pothos.jpeg",
+        "id":4
+    },
+    {
+        "name": "Prayer Plant",
+        "sunlight": 2,
+        "price": 6,
+        "image": "images/prayer.jpeg",
+        "id":5
+    },
+    {
+        "name": "Snake Plant",
+        "sunlight": 2,
+        "price": 7,
+        "image": "images/snake.jpeg",
+        "id":6
+    }
+]
