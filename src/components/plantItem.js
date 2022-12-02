@@ -11,7 +11,7 @@ export default function PlantItem(props) {
 
     return (
         <div className="card">
-            <img style={{ width: "100%", height: "70%" }} src={image} />
+            <img style={{ width: "100%", height: "70%" }} src={image} alt={name}/>
             <h3 className="plant-name">{name}</h3>
             <p className="card-text">sunlight level: {sunlight}</p>
             <p className="card-text">price: ${price}</p>

@@ -77,13 +77,14 @@ function App() {
     setCheckedIndoor("");
     setCheckedOutdoor("");
     setCheckedSort("");
-    let newcart = plantData.sort((a,b) => (a.id-b.id));
+    let newcart = plantData.sort((a, b) => (a.id - b.id));
     setplantGrid(newcart);
   }
 
   return (
     <div className="App">
       <head>
+
       </head>
       <h1>The Plant Shop</h1> {/* TODO: personalize your bakery (if you want) */}
       <div className="container">
@@ -112,9 +113,9 @@ function App() {
               <p className="bar-text">
                 <input type="checkbox" checked={checkedIndoor} onChange={handleIndoor} />
                 <span class="checkmark"></span>
-                Indoor Plants 
+                Indoor Plants
                 <br></br>
-                &#40;sunlight level below 5&#41;	 
+                &#40;sunlight level below 5&#41;
               </p>
               <p className="bar-text">
                 <input type="checkbox" checked={checkedOutdoor} onChange={handleOutdoor} />

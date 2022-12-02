@@ -135,7 +135,7 @@ h3 {
   background-color: #3d9074;
   color: #f7b98c;
   font-weight: bold;
-  border: none;
+  border: 1px solid #f9c8a4;
   border-radius: 3px;
 }
 
