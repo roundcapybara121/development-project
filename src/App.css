@@ -93,7 +93,7 @@ h3 {
 .add-button {
   background-color: #3d9074;
   color: #f7b98c;
-  border: none;
+  border: 1px solid #f9c8a4;
   border-radius: 5px;
   height: 20px;
   width: 100px;
@@ -105,6 +105,7 @@ h3 {
   color: #3d9074;
   font-weight: bold;
   transition: 0.2s;
+  border: none;
 }
 
 .upper-bar {
