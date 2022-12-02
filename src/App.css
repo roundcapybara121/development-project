@@ -44,6 +44,7 @@ h1 {
   font-family: monospace;
   color: #1e5945;
   font-weight: bolder;
+  font-size: 17px;
 }
 
 h3 {
@@ -72,6 +73,7 @@ h3 {
   background-color: #1e5945;
   border-radius: 15px;
   line-height: 5px;
+  border: 2px solid #f9c8a4;
 }
 
 .content {
