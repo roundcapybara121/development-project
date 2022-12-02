@@ -132,7 +132,7 @@ function App() {
 
           <div className="cart">
             <div className="inner-cart">
-              <h2 className="cart-text">Cart</h2>
+              <h3 className="cart-text">Cart</h3>
               <h3>Total Price: ${count}</h3>
               <p className="cart-item">{cart.map((item, index) => (<p><button className="remove-button" onClick={() => { setCart(cart.filter((item, itemIndex) => itemIndex != index)); setCount(count - plantData.find(x => x.name === item).price) }}>X</button> {item}</p>))}</p>
             </div>
