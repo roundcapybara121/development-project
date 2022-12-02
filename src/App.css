@@ -1,11 +1,13 @@
 .App {
   text-align: center;
+  height: 200vh;
 }
 
 h1,
 h2,
 h3 {
   font-family: 'Courier New', Courier, monospace;
+  color: #1e5945;
 }
 
 p {
@@ -20,15 +22,15 @@ p {
 
 .card {
   padding-top: 10px;
-  padding-bottom: 30px;
-  width: 200px;
-  height: 300px;
+  padding-bottom: 10px;
+  width: 250px;
+  height: 350px;
   background-color: #ededed;
 }
 
 .content {
   display: grid;
-  grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
+  grid-template-columns: fit-content(300px) fit-content(400px) 1fr;
   grid-gap: 10px;
   box-sizing: border-box;
   height: 200px;
@@ -37,5 +39,61 @@ p {
 }
 
 .sidebar {
+  padding-top: 30px;
   width: 30%;
+  text-align: left;
+}
+
+.add-button {
+  background-color: #3d9074;
+  color: #f7b98c;
+  border: none;
+  border-radius: 5px;
+  height: 20px;
+  width: 100px;
+  font-weight: bold;
+}
+
+.add-button:hover {
+  background-color: #f7b98c;
+  color: #3d9074;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.upper-bar {
+  background-color: #ededed;
+  width: 280px;
+  border-radius: 15px;
+}
+
+.inner-bar {
+  padding: 10px;
+}
+
+.cart {
+  width: 280px;
+}
+
+.inner-cart {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.remove-button {
+  background-color: #3d9074;
+  color: #f7b98c;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+}
+
+.remove-button:hover {
+  background-color: #f7b98c;
+  color:#3d9074;
+  transition: .2s;
+}
+
+input[type=checkbox] {
+  accent-color: #3d9074;
 }

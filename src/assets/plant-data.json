@@ -4,41 +4,83 @@
         "sunlight": 2,
         "price": 7,
         "image": "images/monstera.webp",
-        "id":1
+        "id": 1
+    },
+    {
+        "name": "Aloe",
+        "sunlight": 5,
+        "price": 9,
+        "image": "images/aloe.webp",
+        "id": 2
+    },
+    {
+        "name": "Pink Anthurium",
+        "sunlight": 7,
+        "price": 13,
+        "image": "images/anthurium-pink.webp",
+        "id": 3
     },
     {
         "name": "Peace Lily",
         "sunlight": 1,
         "price": 11,
         "image": "images/peace-lily.jpeg",
-        "id":2
+        "id": 4
+    },
+    {
+        "name": "Begonia Jurassic Silver Point",
+        "sunlight": 6,
+        "price": 9,
+        "image": "images/begonia-jurassic-silver-point.webp",
+        "id": 5
     },
     {
         "name": "Peperomia",
         "sunlight": 3,
         "price": 8,
         "image": "images/peperomia.webp",
-        "id":3
+        "id": 6
+    },
+    {
+        "name": "Bromelia Pink Antonio",
+        "sunlight": 9,
+        "price": 11,
+        "image": "images/bromeliad-pink-antonio.webp",
+        "id": 7
     },
     {
         "name": "Pothos",
         "sunlight": 1,
         "price": 5,
         "image": "images/pothos.jpeg",
-        "id":4
+        "id": 8
     },
     {
         "name": "Prayer Plant",
         "sunlight": 2,
         "price": 6,
         "image": "images/prayer.jpeg",
-        "id":5
+        "id": 9
+    },
+    {
+        "name": "Cardboard Palm",
+        "sunlight": 5,
+        "price": 20,
+        "image": "images/cardboard-palm.webp",
+        "id": 10
+    },
+    {
+        "name": "Parlor Palm",
+        "sunlight": 8,
+        "price": 13,
+        "image": "images/parlor-palm.webp",
+        "id": 11
     },
     {
         "name": "Snake Plant",
         "sunlight": 2,
         "price": 7,
         "image": "images/snake.jpeg",
-        "id":6
+        "id": 12
     }
 ]

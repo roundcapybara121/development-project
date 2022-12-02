@@ -39,14 +39,14 @@ function App() {
   const handleIndoor = () => {
     if (checkedIndoor === "") {
       setCheckedIndoor("checked");
-      let newcart = plantGrid.filter(x => x.sunlight < 2)
+      let newcart = plantGrid.filter(x => x.sunlight < 5)
       setplantGrid(newcart);
     } else {
 
       setCheckedIndoor("");
       let newcart = plantData
       if (checkedOutdoor === "checked") {
-        newcart = plantData.filter(x => x.sunlight >= 2)
+        newcart = plantData.filter(x => x.sunlight >= 5)
       }
       if (checkedSort === "checked") {
         newcart = newcart.sort((a, b) => (a.price - b.price))
@@ -58,13 +58,13 @@ function App() {
   const handleOutdoor = () => {
     if (checkedOutdoor === "") {
       setCheckedOutdoor("checked");
-      let newcart = plantGrid.filter(x => x.sunlight >= 2)
+      let newcart = plantGrid.filter(x => x.sunlight >= 5)
       setplantGrid(newcart);
     } else {
       setCheckedOutdoor("");
       let newcart = plantData
       if (checkedIndoor === "checked") {
-        newcart = plantData.filter(x => x.sunlight < 2)
+        newcart = plantData.filter(x => x.sunlight < 5)
       }
       if (checkedSort === "checked") {
         newcart = newcart.sort((a, b) => (a.price - b.price))
@@ -89,29 +89,40 @@ function App() {
         </div>
 
         <div className="sidebar">
+          <div className="upper-bar">
+            <div className="inner-bar">
+              <h3>Sort price:</h3>
+              <p>
+                <input type="checkbox" checked={checkedSort} onChange={handleSort} />
+                <span class="checkmark"></span>
+                lowest to highest
+              </p>
 
-          <p>
-            Sort by price: lowest to high
-            <input type="checkbox" checked={checkedSort} onChange={handleSort} />
-            <span class="checkmark"></span>
-          </p>
-
-          <h3>Filters:</h3>
-          <label>
-            Indoor Plants
-            <input type="checkbox" checked={checkedIndoor} onChange={handleIndoor} />
-            <span class="checkmark"></span>
-          </label>
+              <h3>Filters:</h3>
+              <p>
+                <input type="checkbox" checked={checkedIndoor} onChange={handleIndoor} />
+                <span class="checkmark"></span>
+                Indoor Plants 
+                <br></br>
+                &#40;sunlight level below 5&#41;	 
+              </p>
+              <p>
+                <input type="checkbox" checked={checkedOutdoor} onChange={handleOutdoor} />
+                <span class="checkmark"></span>
+                Outdoor Plants
+                <br></br>
+                &#40;sunlight level above/equal to 5&#41;
+              </p>
+            </div>
+          </div>
           <br></br>
-          <label>
-            Outdoor Plants
-            <input type="checkbox" checked={checkedOutdoor} onChange={handleOutdoor} />
-            <span class="checkmark"></span>
-          </label>
-
-          <h2>Cart</h2>
-          <h2>Total Price: {count}</h2>
-          <h4>Items: {cart.map((item, index) => (<p>{item} <button onClick={() => { setCart(cart.filter((item, itemIndex) => itemIndex != index)); setCount(count - plantData.find(x => x.name === item).price) }}>X</button></p>))}</h4>
+          <div className="cart">
+            <div className="inner-cart">
+              <h2 className="cart-text">Cart</h2>
+              <h3 className="cart-text">Total Price: ${count}</h3>
+              <p>{cart.map((item, index) => (<p><button className="remove-button" onClick={() => { setCart(cart.filter((item, itemIndex) => itemIndex != index)); setCount(count - plantData.find(x => x.name === item).price) }}>X</button> {item}</p>))}</p>
+            </div>
+          </div>
         </div>
 
       </div>
