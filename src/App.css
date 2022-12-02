@@ -1,17 +1,60 @@
+@import url(https://fonts.googleapis.com/css2?family=Gravitas+One&family=Merriweather:ital@0;1&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
 .App {
   text-align: center;
   height: 200vh;
+  background-color: #3d9074;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Courier New', Courier, monospace;
+.side-text {
+  font-family: 'Limelight', cursive;
   color: #1e5945;
 }
 
-p {
+.plant-name {
+  font-family: 'Limelight', cursive;
+  color: #f7b98c;
+}
+
+.card-text {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.cart-text {
+  font-family: 'Limelight', cursive;
+  color: #f7b98c;
+}
+
+h1 {
+  font-family: 'Limelight', cursive;
+  font-style: bold;
+  font-weight: 400;
+  background-color: #1e5945;
+  text-align: center;
+  margin: 0;
+  height: 60px;
+  padding-top: 20px;
+  color: #f7b98c;
+}
+
+.bar-text {
   font-family: monospace;
+  color: #1e5945;
+  font-weight: bolder;
+}
+
+h3 {
+  color:#f7b98c;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cart-item {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 .container {
@@ -25,7 +68,10 @@ p {
   padding-bottom: 10px;
   width: 250px;
   height: 350px;
-  background-color: #ededed;
+  /* background-color: #ededed; */
+  background-color: #1e5945;
+  border-radius: 15px;
+  line-height: 5px;
 }
 
 .content {
@@ -62,7 +108,7 @@ p {
 }
 
 .upper-bar {
-  background-color: #ededed;
+  background-color: #f9c8a4;
   width: 280px;
   border-radius: 15px;
 }
@@ -73,6 +119,8 @@ p {
 
 .cart {
   width: 280px;
+  background-color: #1e5945;
+  border-radius: 15px;
 }
 
 .inner-cart {
@@ -90,10 +138,29 @@ p {
 
 .remove-button:hover {
   background-color: #f7b98c;
-  color:#3d9074;
+  color: #3d9074;
   transition: .2s;
 }
 
 input[type=checkbox] {
   accent-color: #3d9074;
+}
+
+.reset-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #3d9074;
+  color: #f7b98c;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  font-weight: bold;
+  border: 2px solid #f7b98c
+}
+
+.reset-button:hover {
+  background-color: #f7b98c;
+  color: #3d9074;
+  font-weight: bold;
+  transition: 0.2s;
 }

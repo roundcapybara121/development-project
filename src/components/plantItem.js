@@ -11,11 +11,10 @@ export default function PlantItem(props) {
 
     return (
         <div className="card">
-
-            <img style={{ width: "80%", height: "50%", borderRadius: 15 }} src={image} />
-            <h3>{name}</h3>
-            <p>sunlight level: {sunlight}</p>
-            <p>price: ${price}</p>
+            <img style={{ width: "100%", height: "70%" }} src={image} />
+            <h3 className="plant-name">{name}</h3>
+            <p className="card-text">sunlight level: {sunlight}</p>
+            <p className="card-text">price: ${price}</p>
             <p><button className="add-button" onClick={() => handleClick(name, price)}>Add to Cart</button></p>
         </div>
     )

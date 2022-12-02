@@ -73,8 +73,18 @@ function App() {
     }
   }
 
+  const handleReset = () => {
+    setCheckedIndoor("");
+    setCheckedOutdoor("");
+    setCheckedSort("");
+    let newcart = plantData.sort((a,b) => (a.id-b.id));
+    setplantGrid(newcart);
+  }
+
   return (
     <div className="App">
+      <head>
+      </head>
       <h1>The Plant Shop</h1> {/* TODO: personalize your bakery (if you want) */}
       <div className="container">
 
@@ -91,22 +101,22 @@ function App() {
         <div className="sidebar">
           <div className="upper-bar">
             <div className="inner-bar">
-              <h3>Sort price:</h3>
-              <p>
+              <h3 className="side-text">Sort price:</h3>
+              <p className="bar-text">
                 <input type="checkbox" checked={checkedSort} onChange={handleSort} />
                 <span class="checkmark"></span>
                 lowest to highest
               </p>
 
-              <h3>Filters:</h3>
-              <p>
+              <h3 className="side-text">Filters:</h3>
+              <p className="bar-text">
                 <input type="checkbox" checked={checkedIndoor} onChange={handleIndoor} />
                 <span class="checkmark"></span>
                 Indoor Plants 
                 <br></br>
                 &#40;sunlight level below 5&#41;	 
               </p>
-              <p>
+              <p className="bar-text">
                 <input type="checkbox" checked={checkedOutdoor} onChange={handleOutdoor} />
                 <span class="checkmark"></span>
                 Outdoor Plants
@@ -115,12 +125,16 @@ function App() {
               </p>
             </div>
           </div>
+
+          <button className="reset-button" onClick={() => handleReset()}>Reset All Sort and Filters</button>
+
           <br></br>
+
           <div className="cart">
             <div className="inner-cart">
               <h2 className="cart-text">Cart</h2>
-              <h3 className="cart-text">Total Price: ${count}</h3>
-              <p>{cart.map((item, index) => (<p><button className="remove-button" onClick={() => { setCart(cart.filter((item, itemIndex) => itemIndex != index)); setCount(count - plantData.find(x => x.name === item).price) }}>X</button> {item}</p>))}</p>
+              <h3>Total Price: ${count}</h3>
+              <p className="cart-item">{cart.map((item, index) => (<p><button className="remove-button" onClick={() => { setCart(cart.filter((item, itemIndex) => itemIndex != index)); setCount(count - plantData.find(x => x.name === item).price) }}>X</button> {item}</p>))}</p>
             </div>
           </div>
         </div>
